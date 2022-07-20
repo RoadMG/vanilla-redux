@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
-import { actionCreators } from '../Store';
+import { remove } from '../Store';
 
 
 
@@ -40,7 +40,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch){
 
     return{
-        onBtnClick: (id) => dispatch(actionCreators.deleteToDo(id))
+        onBtnClick: (id) => dispatch(remove(id))
     }
 }
 
